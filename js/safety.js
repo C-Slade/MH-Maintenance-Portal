@@ -1,0 +1,5 @@
+class Safety {
+    constructor() {
+
+    }
+}

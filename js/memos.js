@@ -1,0 +1,5 @@
+class Memos {
+    constructor() {
+
+    }
+}
