@@ -1,0 +1,110 @@
+$blue: #4a83ff;
+$break-medium: 800px; 
+
+.content {
+
+    .button {
+        width: 15rem;
+        min-width: 10rem;
+        height: 2.5rem;
+        background-color: $blue;  
+        font-size: 1.25rem;
+        border-radius: .45rem;
+        cursor: pointer;
+        text-align: center;
+        border: .5px solid white;
+        transition: all ease-in-out .3s;
+        font-weight: 300;
+        color: white;
+
+        &:hover {
+            background-color: white;
+            border: 2px solid $blue;
+            color: $blue;
+            font-weight: 600;
+        }
+    }
+
+    .manuals {
+        width: 95%;
+        margin: 4rem 0;
+        align-self: center;
+
+        ul {
+            list-style-type: none;
+
+            li {
+                color: white;
+                text-decoration: underline;
+                text-align: center;
+                margin: 1rem 0 0 0;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .home-main-3 {
+        width: 75%;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        margin: 3rem 0 0 0;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            text-align: center;
+
+            :nth-child(1){
+                font-size: 1rem;
+                padding: .55rem 0 0 0;
+            }
+
+            li {
+                margin: 0 1rem;
+                padding: 0.4rem 0 0 0;
+
+                @media screen and (max-width: $break-medium) {
+                    width: 100%;
+                    margin: 1rem 0;
+                }
+            }
+
+            @media screen and (max-width: $break-medium) {
+                display: inline-block;
+                align-self: center;
+                height: 100%;
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: $break-medium) {
+            width: 100%;
+        }
+    }
+    h2 {
+        text-align: center;
+        color: white;
+        margin: 2rem 0;
+    }
+    .home-main-2 {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 3rem 0;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            li {
+                margin: 0 1rem;
+                padding: .45rem 0;
+
+                @media screen and (max-width: $break-medium) {
+                    width: 35%;
+                    margin: 0 .25rem;
+                }
+            }
+        }
+    }
+}

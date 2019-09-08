@@ -6,10 +6,120 @@
   font-family: 'Nunito', sans-serif;
 }
 
-body {
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  display: none;
+}
+
+.pdf-viewer {
+  position: absolute;
+  top: 5.5rem;
+  left: 32.5%;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  display: none;
+}
+
+.pdf-viewer .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: rgba(0, 0, 0, 0.561);
+  border-radius: 0.5rem;
+  height: 2rem;
+}
+
+.pdf-viewer .button-container button {
+  margin: 0.25rem 0.75rem;
+  width: 4rem;
+  background-color: #4a83ff;
+  font-size: 1.25rem;
+  border-radius: .45rem;
+  cursor: pointer;
+  text-align: center;
+  border: .5px solid white;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  font-weight: 300;
+  color: white;
+  padding: 0 0 1.65rem 0;
+}
+
+.pdf-viewer .button-container button:hover {
   background-color: white;
-  height: 1200px;
-  background-image: url(../img/heli-6.jpg);
+  border: 1px solid #4a83ff;
+  color: #4a83ff;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 500px) {
+  .pdf-viewer .button-container button {
+    width: 2.5rem;
+    font-size: 0.75rem;
+    padding: 0 0 0rem 0;
+  }
+}
+
+.pdf-viewer .button-container .count {
+  width: 10rem;
+  height: 1.5rem;
+  color: white;
+  margin: 0.45rem 0 0 0;
+  font-size: 0.85rem;
+}
+
+.pdf-viewer .button-container svg {
+  margin: .45rem 0 0 0;
+  stroke: #fff;
+  stroke-width: 2.5;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  cursor: pointer;
+}
+
+.pdf-viewer .button-container svg:hover {
+  stroke: #4a83ff;
+}
+
+@media screen and (max-width: 1300px) {
+  .pdf-viewer {
+    left: 25.5%;
+  }
+}
+
+@media screen and (max-width: 1115px) {
+  .pdf-viewer {
+    left: 20.5%;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .pdf-viewer {
+    left: 15.5%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .pdf-viewer {
+    left: 7.5%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .pdf-viewer {
+    left: 4.5%;
+  }
+}
+
+body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,6 +130,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -45,6 +156,9 @@ nav span {
 nav span img {
   width: 2rem;
   height: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 nav span h3 {
@@ -52,8 +166,15 @@ nav span h3 {
   color: slategray;
 }
 
+@media screen and (max-width: 800px) {
+  nav span h3 {
+    font-size: .75rem;
+  }
+}
+
 nav svg {
   cursor: pointer;
+  margin: 0 1rem 0 0;
 }
 
 nav svg line {
@@ -62,8 +183,67 @@ nav svg line {
   stroke-linecap: round;
 }
 
+@media screen and (max-width: 425px) {
+  nav svg line {
+    stroke-width: 0.15rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  nav svg {
+    width: 40;
+    margin: 0 0.5rem 0 0;
+  }
+}
+
+nav .remove-menu {
+  stroke: #000000;
+  stroke-width: 0.3rem;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  cursor: pointer;
+  margin: 0.25rem 1rem 0 0;
+}
+
+nav .remove-menu:hover {
+  stroke: #4a83ff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.ham-nav {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.897);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ham-nav ul {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  list-style-type: none;
+}
+
+.ham-nav ul li {
+  color: white;
+  width: 20rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: 0 0 2rem 0;
+  font-size: 3.5rem;
+}
+
 .content {
-  height: 1200px;
   width: 75%;
   -ms-flex-item-align: center;
       align-self: center;
@@ -77,9 +257,9 @@ nav svg line {
 }
 
 .content .nav {
-  position: fixed;
-  width: 75%;
-  height: 10rem;
+  position: relative;
+  width: 100%;
+  margin: 8rem 0 0 0;
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -88,13 +268,10 @@ nav svg line {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 10;
-  background: inherit;
 }
 
 .content .nav ul {
-  position: absolute;
-  bottom: 10px;
+  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,19 +286,27 @@ nav svg line {
   font-size: 1.25em;
   cursor: pointer;
   color: white;
+  margin: 1rem 0 0 0;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
 }
 
-.content .manuals {
-  width: 95%;
-  margin: 20rem 0 0 0;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  z-index: 5;
-  overflow: auto;
+@media screen and (max-width: 800px) {
+  .content .nav ul li {
+    font-size: .85rem;
+    margin: 1.25rem 0 0 0;
+  }
 }
 
-.content .manuals ul {
-  list-style-type: none;
+@media screen and (max-width: 800px) {
+  .content .nav {
+    margin: 4rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content {
+    width: 95%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,134 @@
+.content .button {
+  width: 15rem;
+  min-width: 10rem;
+  height: 2.5rem;
+  background-color: #4a83ff;
+  font-size: 1.25rem;
+  border-radius: .45rem;
+  cursor: pointer;
+  text-align: center;
+  border: .5px solid white;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  font-weight: 300;
+  color: white;
+}
+
+.content .button:hover {
+  background-color: white;
+  border: 2px solid #4a83ff;
+  color: #4a83ff;
+  font-weight: 600;
+}
+
+.content .manuals {
+  width: 95%;
+  margin: 4rem 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.content .manuals ul {
+  list-style-type: none;
+}
+
+.content .manuals ul li {
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  margin: 1rem 0 0 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.content .home-main-3 {
+  width: 75%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3rem 0 0 0;
+}
+
+.content .home-main-3 ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.content .home-main-3 ul :nth-child(1) {
+  font-size: 1rem;
+  padding: .55rem 0 0 0;
+}
+
+.content .home-main-3 ul li {
+  margin: 0 1rem;
+  padding: 0.4rem 0 0 0;
+}
+
+@media screen and (max-width: 800px) {
+  .content .home-main-3 ul li {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content .home-main-3 ul {
+    display: inline-block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    height: 100%;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content .home-main-3 {
+    width: 100%;
+  }
+}
+
+.content h2 {
+  text-align: center;
+  color: white;
+  margin: 2rem 0;
+}
+
+.content .home-main-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 3rem 0;
+}
+
+.content .home-main-2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.content .home-main-2 ul li {
+  margin: 0 1rem;
+  padding: .45rem 0;
+}
+
+@media screen and (max-width: 800px) {
+  .content .home-main-2 ul li {
+    width: 35%;
+    margin: 0 .25rem;
+  }
+}
+/*# sourceMappingURL=home-styles.css.map */

@@ -4,24 +4,40 @@ let allManuals = [
         manuals: [
             {
                 name: 'Bell 206 AAIP',
-                filePath: 'http://rotor-apps.com/MHI/manuals/206LAAIPP.pdf'
+                filePath: '../Temp-docs/206LAAIPP.pdf'
             },
             {
                 name: 'Bell 407 AAIP',
-                filePath: 'http://rotor-apps.com/MHI/manuals/407AAIPP.pdf'
+                filePath: '../Temp-docs/407AAIPP.pdf'
             },
             {
                 name: 'BO-105 AAIP',
-                filePath: 'http://rotor-apps.com/MHI/manuals/105AAIP.pdf'
+                filePath: '../Temp-docs/105AAIP.pdf'
             },
             {
                 name: 'AW119 AAIP',
-                filePath: 'http://www.rotor-apps.com/MHI/manuals/119AAIP.pdf'
+                filePath: '../Temp-docs/119AAIP.pdf'
             },
             {
                 name: 'Bell 412 AAIP',
-                filePath: 'http://www.rotor-apps.com/MHI/manuals/Camp.pdf'
+                filePath: '../Temp-docs/Camp.pdf'
             },
+        ],
+        power_trent_charts: [
+            {
+                name: '206/407',
+                filePath: '../Temp-docs/RR_Eng_Chart.XLS'
+            },
+            {
+                name: '412',
+                filePath: '../Temp-docs/Engtc.pdf'
+            },
+        ],
+        emergency_response_plan: [
+            {
+                name: 'ERP',
+                filePath: '../Temp-docs/epc.pdf'
+            }
         ]
     }
 ]
