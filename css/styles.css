@@ -17,12 +17,14 @@ iframe {
 }
 
 .pdf-viewer {
-  position: absolute;
+  position: fixed;
   top: 5.5rem;
   left: 32.5%;
   -webkit-transition: all ease-in-out .3s;
   transition: all ease-in-out .3s;
   display: none;
+  opacity: 0;
+  z-index: 100;
 }
 
 .pdf-viewer .button-container {
@@ -40,7 +42,7 @@ iframe {
 .pdf-viewer .button-container button {
   margin: 0.25rem 0.75rem;
   width: 4rem;
-  background-color: #4a83ff;
+  background-color: #6596ff;
   font-size: 1.25rem;
   border-radius: .45rem;
   cursor: pointer;
@@ -55,8 +57,8 @@ iframe {
 
 .pdf-viewer .button-container button:hover {
   background-color: white;
-  border: 1px solid #4a83ff;
-  color: #4a83ff;
+  border: 1px solid #6596ff;
+  color: #6596ff;
   font-weight: 600;
 }
 
@@ -86,7 +88,7 @@ iframe {
 }
 
 .pdf-viewer .button-container svg:hover {
-  stroke: #4a83ff;
+  stroke: #6596ff;
 }
 
 @media screen and (max-width: 1300px) {
@@ -120,6 +122,7 @@ iframe {
 }
 
 body {
+  background-image: url(../img/heli-6.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -131,6 +134,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 nav {
@@ -141,7 +145,28 @@ nav {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  z-index: 10;
+  z-index: 500;
+}
+
+nav .click-ham {
+  width: 85px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  cursor: pointer;
+}
+
+nav .click-remove {
+  width: 85px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  z-index: 11;
+  cursor: pointer;
 }
 
 nav span {
@@ -174,7 +199,7 @@ nav span h3 {
 
 nav svg {
   cursor: pointer;
-  margin: 0 1rem 0 0;
+  margin: 0 2rem 0 0;
 }
 
 nav svg line {
@@ -183,13 +208,13 @@ nav svg line {
   stroke-linecap: round;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
   nav svg line {
     stroke-width: 0.15rem;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
   nav svg {
     width: 40;
     margin: 0 0.5rem 0 0;
@@ -197,18 +222,30 @@ nav svg line {
 }
 
 nav .remove-menu {
-  stroke: #000000;
-  stroke-width: 0.3rem;
   -webkit-transition: all ease-in-out .3s;
   transition: all ease-in-out .3s;
   cursor: pointer;
-  margin: 0.25rem 1rem 0 0;
+  margin: 0.25rem 2rem 0 0;
+  display: none;
+  z-index: 2;
+}
+
+nav .remove-menu line {
+  stroke: #000000;
+  stroke-width: 0.2rem;
+  stroke-linecap: round;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  z-index: 1;
 }
 
 nav .remove-menu:hover {
-  stroke: #4a83ff;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+nav .remove-menu:hover line {
+  stroke: #6596ff;
 }
 
 .ham-nav {
@@ -224,6 +261,12 @@ nav .remove-menu:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
+  z-index: 100;
 }
 
 .ham-nav ul {
@@ -241,6 +284,16 @@ nav .remove-menu:hover {
   text-align: center;
   margin: 0 0 2rem 0;
   font-size: 3.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.ham-nav ul li:hover {
+  color: #6596ff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .content {
@@ -254,10 +307,87 @@ nav .remove-menu:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+.content .nav nav.top-3-nav {
+  position: absolute;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  margin: 2.75rem 0 0 0;
+  height: 2.5rem;
+  text-transform: capitalize;
+  z-index: 0;
+}
+
+.content .nav nav.top-3-nav .ul-top-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  width: 100%;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
+}
+
+.content .nav nav.top-3-nav .ul-top-3 li {
+  width: 20%;
+  background-color: slategray;
+  margin: 0 1%;
+  min-width: 5rem;
+  color: white;
+  padding: 0.40rem 0 0 0;
+  cursor: pointer;
+  font-size: 1.15rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+@media screen and (max-width: 800px) {
+  .content .nav nav.top-3-nav .ul-top-3 li {
+    font-size: 0.75rem;
+    padding: 0.65rem 0;
+  }
+}
+
+.content .button {
+  width: 15rem;
+  min-width: 10rem;
+  height: 2.5rem;
+  background-color: #6596ff;
+  font-size: 1.25rem;
+  border-radius: .45rem;
+  cursor: pointer;
+  text-align: center;
+  border: .5px solid white;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  font-weight: 300;
+  color: white;
+}
+
+.content .button:hover {
+  background-color: white;
+  border: 2px solid #6596ff;
+  color: #6596ff;
+  font-weight: 600;
 }
 
 .content .nav {
-  position: relative;
   width: 100%;
   margin: 8rem 0 0 0;
   -ms-flex-item-align: center;
@@ -270,7 +400,7 @@ nav .remove-menu:hover {
           justify-content: center;
 }
 
-.content .nav ul {
+.content .nav .ul-nav {
   height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,17 +412,15 @@ nav .remove-menu:hover {
   border-bottom: 1.25px solid slategray;
 }
 
-.content .nav ul li {
+.content .nav .ul-nav li {
   font-size: 1.25em;
   cursor: pointer;
   color: white;
   margin: 1rem 0 0 0;
-  -webkit-transition: all ease-in-out .3s;
-  transition: all ease-in-out .3s;
 }
 
 @media screen and (max-width: 800px) {
-  .content .nav ul li {
+  .content .nav .ul-nav li {
     font-size: .85rem;
     margin: 1.25rem 0 0 0;
   }

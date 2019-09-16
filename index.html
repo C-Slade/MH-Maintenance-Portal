@@ -12,7 +12,14 @@
     <link rel="stylesheet" href="css/Safety/safety-styles.css">
     <link rel="stylesheet" href="css/Memos/memos-styles.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Maritime Helicopters Maintenance Portal</title>
+
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
 </head>
 <body>
     <nav>
@@ -20,30 +27,24 @@
             <img src="img/mari-logo-1.png" alt="">
             <h3>Maritime Helicopters Maintenance Portal</h3>
         </span>
-
-        <svg height="48" width="50">
+        <!-- Added a transparent divs to overlay the svg for easier clicks on the menu -->
+        <div class="click-ham"></div>
+        <svg height="48" width="50" class="hamburger-menu">
             <line x1="10" y1="15" x2="50" y2="15" />
             <line x1="10" y1="25" x2="50" y2="25" />
             <line x1="10" y1="35" x2="50" y2="35" />
         </svg>
+
+        <div class="click-remove"></div>
+        <svg class="remove-menu" style="width: 55; height: 45;">
+            <line x1="20" y1="10" x2="45" y2=35 />
+            <line x1="45" y1="10" x2="20" y2="35" />
+        </svg>
     </nav>
 
-    <div class="content">
-        <div class="nav">
-            <ul>
-                <li class="nav-home">Home</li>
-                <li class="nav-calm">Calm</li>
-                <li class="nav-manuals">Manuals</li>
-                <li class="nav-training">Training</li>
-                <li class="nav-safety">Safety</li>
-                <li class="nav-memos">Memos</li>
-            </ul>
-        </div>
-    </div>
-
     <iframe id="download" src="" frameborder="0"></iframe>
-
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="js/allManuals.js"></script>
     <script src="js/home.js"></script>
     <script src="js/calm.js"></script>

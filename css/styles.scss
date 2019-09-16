@@ -1,7 +1,4 @@
-$grey: slategray;
-$blue: #4a83ff;
-$break-medium: 800px; 
-$break-small: 425px;
+@import "variables.scss";
 
 *  {
     box-sizing: border-box;
@@ -20,12 +17,16 @@ iframe {
     display: none;
 }
 
+
 .pdf-viewer {
-    position: absolute;
+    position: fixed;
     top: 5.5rem;
     left: 32.5%; 
     transition: all ease-in-out .3s;
     display: none;
+    opacity: 0;
+    z-index: 100;
+
 
     .button-container {
         display: flex;
@@ -99,6 +100,7 @@ iframe {
 }
 
 body {
+    background-image: url(../img/heli-6.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -106,6 +108,7 @@ body {
     display: flex;
     justify-content: center;
     scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 nav {
@@ -114,7 +117,28 @@ nav {
     background-color: white;
     display: flex;
     position: fixed;
-    z-index: 10;
+    z-index: 500;
+
+    .click-ham {
+        width: 85px;
+        height: 48px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 11;
+        cursor: pointer;
+    }
+
+    .click-remove {
+        width: 85px;
+        height: 48px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        z-index: 11;
+        cursor: pointer;
+    }
 
     span {
         display: flex;
@@ -139,7 +163,7 @@ nav {
 
     svg {
         cursor: pointer;
-        margin: 0 1rem 0 0;
+        margin: 0 2rem 0 0;
 
         line {
             stroke: black;
@@ -157,15 +181,26 @@ nav {
     }
 
     .remove-menu {
-        stroke: #000000;
-        stroke-width: 0.3rem;
         transition: all ease-in-out .3s;
         cursor: pointer;
-        margin: 0.25rem 1rem 0 0;
+        margin: 0.25rem 2rem 0 0;
+        display: none;
+        z-index: 2;
+
+        line {
+            stroke: #000000;
+            stroke-width: 0.2rem;
+            stroke-linecap: round;
+            transition: all ease-in-out 0.3s;
+            z-index: 1;
+        }
 
         &:hover {
-            stroke: #4a83ff;
-            transform: scale(1.1)
+            transform: scale(1.1);
+
+            line {
+                stroke: $blue;
+            }
         }
     }
 }
@@ -176,6 +211,11 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    z-index: 100;
+
 
     ul {
         align-self: center;
@@ -188,6 +228,15 @@ nav {
             text-align: center;
             margin: 0 0 2rem 0;
             font-size: 3.5rem;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition: all ease-in-out 0.3s;
+
+
+            &:hover {
+                color: $blue;
+                transform: scale(1.1)
+            }
         }
     }
 }
@@ -197,16 +246,80 @@ nav {
     align-self: center;
     display: flex;
     flex-direction: column;
+    position: relative;
+    text-align: center;
+
+    .nav nav.top-3-nav {
+        position: absolute;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        margin: 2.75rem 0 0 0;
+        height: 2.5rem;
+        text-transform: capitalize;
+        z-index: 0;
+
+        .ul-top-3 {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            width: 100%;
+            transform: scaleY(0);
+            transform-origin: top;
+            opacity: 0;
+
+            li {
+                width: 20%;
+                background-color: $grey;
+                margin: 0 1%;
+                min-width: 5rem;
+                color: white;
+                padding: 0.40rem 0 0 0;
+                cursor: pointer;
+                font-size: 1.15rem;
+                border-bottom-left-radius: 0.25rem;
+                border-bottom-right-radius: 0.25rem;
+
+                @media screen and (max-width: $break-medium) {
+                    font-size: 0.75rem;
+                    padding: 0.65rem 0;
+                }
+            }
+        }
+    }
+
+        .button {
+            width: 15rem;
+            min-width: 10rem;
+            height: 2.5rem;
+            background-color: $blue;  
+            font-size: 1.25rem;
+            border-radius: .45rem;
+            cursor: pointer;
+            text-align: center;
+            border: .5px solid white;
+            transition: all ease-in-out .3s;
+            font-weight: 300;
+            color: white;
+
+        &:hover {
+            background-color: white;
+            border: 2px solid $blue;
+            color: $blue;
+            font-weight: 600;
+        }
+    }
+
 
         .nav {
-            position: relative;
             width: 100%;
             margin: 8rem 0 0 0;
             align-self: center;
             display: flex;
             justify-content: center;
 
-                ul {
+                .ul-nav {
                     height: 3rem;
                     display: flex;
                     justify-content: space-around;
@@ -219,7 +332,6 @@ nav {
                             cursor: pointer;
                             color: white;
                             margin: 1rem 0 0 0;
-                            transition: all ease-in-out .3s;
 
                             @media screen and (max-width: $break-medium) {
                                 font-size: .85rem;

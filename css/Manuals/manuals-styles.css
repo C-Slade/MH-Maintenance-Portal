@@ -1,1 +1,188 @@
-/* No CSS *//*# sourceMappingURL=manuals-styles.css.map */
+.content .display-grid {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: (200px)[3] !important;
+      grid-template-columns: repeat(3, 200px) !important;
+}
+
+.content .display-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: top !important;
+      -ms-flex-pack: top !important;
+          justify-content: top !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
+
+.content .warning {
+  position: fixed;
+  width: 30%;
+  height: 10rem;
+  top: 25%;
+  left: 25%;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.657);
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 18rem;
+  opacity: 0;
+}
+
+.content .warning i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.content .warning h2 {
+  color: #6596ff;
+}
+
+.content .warning ul {
+  list-style-type: none;
+}
+
+.content .warning ul li {
+  color: white;
+}
+
+.content .warning ul li #user,
+.content .warning ul li #pass {
+  background-color: #6596ff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.content .warning ul li #user-text,
+.content .warning ul li #pass-text {
+  color: #6596ff;
+  font-weight: bold;
+}
+
+.content .warning .go {
+  background-color: #6596ff;
+  border-radius: 0.25rem;
+  width: 5.5rem;
+  margin: 1rem 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+  cursor: pointer;
+}
+
+.content .warning .go a {
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .content .warning {
+    left: 0.15rem;
+  }
+}
+
+.content .options {
+  display: -ms-grid;
+  display: grid;
+  margin: 6rem 0;
+  -ms-grid-columns: (minmax(225px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
+}
+
+.content .options .button {
+  width: 14rem;
+  margin: 0.5rem 0.25rem;
+  padding: 0.35rem 0;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-transform: capitalize;
+}
+
+.content .manuals-manual-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
+}
+
+.content .manuals-manual-wrapper .manual-type {
+  padding: .35rem 0;
+  border-bottom: 1px solid white;
+  font-size: 1.5rem;
+  margin: 0 0.25rem;
+  width: 12rem;
+  min-width: 10rem;
+  height: 2.5rem;
+  background-color: #6596ff;
+  border-radius: .45rem;
+  text-align: center;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  font-weight: 300;
+  color: white;
+}
+
+.content .manuals-manual-wrapper .manual-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5% 0;
+  min-height: 20rem;
+}
+
+.content .manuals-manual-wrapper .manual-wrapper p {
+  text-decoration: underline;
+  color: white;
+  width: 100%;
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.content .manuals-manual-wrapper .manual-wrapper p:hover {
+  color: #6596ff;
+}
+
+@media screen and (max-width: 800px) {
+  .content .manuals-manual-wrapper .manual-wrapper {
+    -ms-grid-columns: (150px)[2] !important;
+        grid-template-columns: repeat(2, 150px) !important;
+  }
+}
+/*# sourceMappingURL=manuals-styles.css.map */

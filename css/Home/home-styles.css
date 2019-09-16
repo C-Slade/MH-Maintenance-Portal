@@ -1,32 +1,14 @@
-.content .button {
-  width: 15rem;
-  min-width: 10rem;
-  height: 2.5rem;
-  background-color: #4a83ff;
-  font-size: 1.25rem;
-  border-radius: .45rem;
-  cursor: pointer;
-  text-align: center;
-  border: .5px solid white;
-  -webkit-transition: all ease-in-out .3s;
-  transition: all ease-in-out .3s;
-  font-weight: 300;
-  color: white;
-}
-
-.content .button:hover {
-  background-color: white;
-  border: 2px solid #4a83ff;
-  color: #4a83ff;
-  font-weight: 600;
-}
-
 .content .manuals {
   width: 95%;
   margin: 4rem 0;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
 }
 
 .content .manuals ul {
@@ -42,6 +24,10 @@
   cursor: pointer;
 }
 
+.content .manuals ul li:hover {
+  color: #6596ff;
+}
+
 .content .home-main-3 {
   width: 75%;
   -ms-flex-item-align: center;
@@ -53,6 +39,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 3rem 0 0 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
 }
 
 .content .home-main-3 ul {
@@ -97,10 +88,15 @@
   }
 }
 
-.content h2 {
+.content .power-trend-chart {
   text-align: center;
   color: white;
   margin: 2rem 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
 }
 
 .content .home-main-2 {
@@ -111,6 +107,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 0 3rem 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
 }
 
 .content .home-main-2 ul {
