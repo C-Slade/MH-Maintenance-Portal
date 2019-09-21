@@ -1,1 +1,66 @@
-/* No CSS *//*# sourceMappingURL=safety-styles.css.map */
+.content h2 {
+  color: white;
+  margin: 2rem;
+}
+
+.content p {
+  color: white;
+}
+
+.content p a {
+  color: #6596ff;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.content .line {
+  width: 50%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-top: 1px solid white;
+  margin: 1rem 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 15rem;
+}
+
+.content .line div {
+  width: 5rem;
+  height: 1.5rem;
+  border: 1px solid white;
+  color: white;
+  border-top: transparent;
+}
+
+.content .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 1rem;
+  width: 75%;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
+}
+
+.content .grid .button {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0.5rem 3rem;
+  padding: 0.25rem;
+}
+
+.content .grid :nth-child(5) {
+  font-size: 1.15rem;
+}
+/*# sourceMappingURL=safety-styles.css.map */

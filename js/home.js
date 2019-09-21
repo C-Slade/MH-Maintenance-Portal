@@ -18,15 +18,15 @@ class Home {
             </div>
 
             <div class="pdf-viewer">
-                    <div class="button-container">
-                        <button class="Prev">Prev</button>
-                        <button class="Next">Next</button>
-                        <div class="count">Page number: 1</div>
-                        <svg height="15" width="15">
-                            <line x1="0" y1="0" x2="15" y2="15" />
-                            <line x1="15" y1="0" x2="0" y2="15" />
-                        </svg>
-                    </div>
+                <div class="button-container">
+                    <button class="Prev">Prev</button>
+                    <button class="Next">Next</button>
+                    <div class="count">Page number: 1</div>
+                    <svg height="15" width="15">
+                        <line x1="0" y1="0" x2="15" y2="15" />
+                        <line x1="15" y1="0" x2="0" y2="15" />
+                    </svg>
+                </div>
             </div>
 
             <div class="manuals">
@@ -35,7 +35,7 @@ class Home {
             </div>
             <div class="home-main-3">
                 <ul>
-                    <li class="button erp">Emergency Response Plan</li>
+                    <li class="button erp">Emergency pocket checklist</li>
                     <a href="https://drive.google.com/drive/folders/0B9Uzp-tOQL7CVkE3QjdBaGl3YlU" target="_blank"><li class="button">Ica's</li></a>
                     <a href="https://mybell.com/bell/en/USD/login" target="_blank"><li class="button">Bell Site</li><a>
                 </ul>
@@ -64,7 +64,6 @@ class Home {
                 DOM(`.pdf-viewer`).style.display = 'block';
                 DOM('.pdf-viewer').innerHTML += '<canvas id="pdf-render"></canvas>'
                 makePDFViewer(this.manuals[i].filePath);
-                TweenMax.to('.pdf-viewer', 0.5, { opacity: 1, ease: Power4, })
             })
         }
 
@@ -73,18 +72,22 @@ class Home {
         TweenMax.to('h2', 1, { scaleY: 1, opacity: 1, ease: Elastic,})
         TweenMax.to('.home-main-2', 1, { scaleY: 1, opacity: 1, ease: Elastic,})
 
-        DOM(`.erp`).addEventListener("click", () => {
-            DOM(`.pdf-viewer`).style.display = 'block';
-            DOM('.pdf-viewer').innerHTML += '<canvas id="pdf-render"></canvas>'
-            makePDFViewer(allManuals[0].emergency_response_plan[0].filePath);
-        })
-        DOM(`.pdf-206-407`).addEventListener("click", () => {
-            DOM('#download').src = allManuals[0].power_trent_charts[0].filePath;
-        })
-        DOM(`.pdf-412`).addEventListener("click", () => {
-            DOM(`.pdf-viewer`).style.display = 'block';
-            DOM('.pdf-viewer').innerHTML += '<canvas id="pdf-render"></canvas>'
-            makePDFViewer(allManuals[0].power_trent_charts[1].filePath, 0.20);
+        DOM('body').addEventListener("click", (e) => {
+            if (e.target == DOM('.erp')) {
+                DOM(`.pdf-viewer`).style.display = 'block';
+                DOM('.pdf-viewer').innerHTML += '<canvas id="pdf-render"></canvas>'
+                makePDFViewer(allManuals[0].emergency_response_plan[0].filePath);
+            }
+
+            if (e.target == DOM('.pdf-206-407')) {
+                DOM('#download').src = allManuals[0].power_trent_charts[0].filePath;
+            }
+
+            if (e.target == DOM('.pdf-412')) {
+                DOM(`.pdf-viewer`).style.display = 'block';
+                DOM('.pdf-viewer').innerHTML += '<canvas id="pdf-render"></canvas>'
+                makePDFViewer(allManuals[0].power_trent_charts[1].filePath);
+            }
         })
 
     }

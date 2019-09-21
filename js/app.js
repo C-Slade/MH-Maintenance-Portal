@@ -10,9 +10,9 @@ function DOM_Create(Selector) {
 const home = new Home();
 const calm = new Calm();
 const manuals = new Manuals();
-// const training = new Training();
-// const safety = new Safety();
-// const memos = new Memos();
+const training = new Training();
+const safety = new Safety();
+const memos = new Memos();
 document.onload = home.appendContent();
 // document.onload = calm.appendContent();
 
@@ -38,6 +38,19 @@ DOM(`body`).addEventListener('click', (e) => {
         DOM('.content').remove();
         manuals.appendContent();
         TweenMax.to('.top-3-nav > .ul-top-3', 0.50, { scaleY: 1, opacity: 1, ease: Elastic, })
+    }
+    if (target == DOM('.content > .nav > .ul-nav > .nav-training')) {
+        DOM('.content').remove();
+        training.appendContent();
+        TweenMax.to('.top-3-nav > .ul-top-3', 0.50, { scaleY: 1, opacity: 1, ease: Elastic, })
+    }
+    if (target == DOM('.content > .nav > .ul-nav > .nav-safety')) {
+        DOM('.content').remove();
+        safety.appendContent();
+    }
+    if (target == DOM('.content > .nav > .ul-nav > .nav-memos')) {
+        DOM('.content').remove();
+        memos.appendContent();
     }
     if (target == DOM('body > nav > .click-ham')) {
         const newDiv = DOM_Create('div');
@@ -110,7 +123,7 @@ DOM(`body`).addEventListener('click', (e) => {
 })
 
 
-function makePDFViewer(passedURL, passedScale) {
+function makePDFViewer(passedURL) {
     let url = passedURL;
     DOM('.pdf-viewer .button-container > svg').addEventListener('click', () => {
         DOM(`.pdf-viewer`).style.display = 'none';
@@ -120,9 +133,13 @@ function makePDFViewer(passedURL, passedScale) {
     })
     let scale = 0.65;
     if (screen.width >= 1920) {
-        scale = 1 || passedScale;
-    } else if (screen.width <= 635) {
-        scale = 0.55 || passedScale;
+        scale = 1;
+    } else if (screen.width > 635) {
+        scale = 0.55;
+    } else if (screen.width > 350) { 
+        scale = 0.50;
+    } else {
+        scale = 0.48;
     }
 
     let pdfDoc = null,
@@ -154,7 +171,10 @@ function makePDFViewer(passedURL, passedScale) {
                 }
             });
 
-            DOM('.count').textContent = `Page number: ${num}/${pdfDoc.numPages}`
+            DOM('.count').textContent = `Page number: ${num}/${pdfDoc.numPages}`;
+            DOM('.button-container').style.width = `${canvas.width}px`;
+            TweenMax.to('.pdf-viewer', 0.5, { opacity: 1, ease: Power4, })
+            console.log(canvas.width)
         })
     }
 

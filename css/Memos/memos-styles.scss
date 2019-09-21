@@ -1,0 +1,45 @@
+@import "../variables.scss";
+
+.content {
+    .main_memos-container {
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        align-self: center;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+
+        .button {
+            margin: 0.75rem 0;
+            padding: 0.25rem;
+        }
+
+        @media screen and (max-width: $break-small) {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    .line {
+        .operations-memos{
+            width: 10rem;
+        }
+    }
+
+    .operation_memos-container {
+        display: flex;
+        flex-direction: column;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+
+        .button {
+            width: 25%;
+            align-self: center;
+            margin: 0.75rem;
+            padding: 0.25rem;
+            min-width: 15rem;
+        }
+    }
+}

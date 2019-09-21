@@ -62,7 +62,7 @@
                 display: inline-block;
                 align-self: center;
                 height: 100%;
-                width: 80%;
+                width: 15rem;
             }
         }
 
@@ -88,15 +88,25 @@
 
         ul {
             display: flex;
+            justify-content: center;
             list-style-type: none;
+
             li {
                 margin: 0 1rem;
                 padding: .45rem 0;
 
                 @media screen and (max-width: $break-medium) {
-                    width: 35%;
+                    width: 1rem;
                     margin: 0 .25rem;
                 }
+
+                @media screen and (max-width: 370px) {
+                    margin: .5rem .25rem;
+                }
+            }
+            @media screen and (max-width: 370px) {
+                flex-direction: column;
+                padding: 1rem;
             }
         }
     }

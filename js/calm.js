@@ -135,7 +135,6 @@ class Calm_calm_reports {
 
             for (let i = 0; i < manual_links.length; i++) {
                 let aTag = manual_links[i]
-                console.log(aTag)
                 let aTag_href = aTag.href;
                 // remove once on live server
                 aTag_href = aTag_href.replace('http://127.0.0.1:5500', '..');
@@ -144,7 +143,6 @@ class Calm_calm_reports {
                     DOM(`.pdf-viewer`).style.display = 'block';
                     DOM('.pdf-viewer').innerHTML += '<canvas id="pdf-render"></canvas>'
                     makePDFViewer(aTag_href);
-                    TweenMax.to('.pdf-viewer', 0.5, { opacity: 1, ease: Power4, })
                     aTag.href = '#!'
                     console.log(aTag)
                 })
@@ -194,7 +192,7 @@ class Calm_flt_time {
         DOM('.dashboard').style.backgroundColor = 'slategray'
         DOM('.flt-time').style.backgroundColor = '#6596ff'
         DOM('.content').innerHTML += `
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScvseR1TYkgwx9bHjzkVWZ8qGjLHz0TlQ0k7qyQYIQhZQbmiA/viewform?embedded=true" 
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOsh82emmzt9yvXWFxbbC1fPurC7uwXdVHODtD91HfiKsmcw/viewform?embedded=true" 
         frameborder="0" 
         scrolling="no" 
         class="iframe"
@@ -221,7 +219,7 @@ class Calm_dashboard {
         DOM('.dashboard').style.backgroundColor = '#6596ff'
         DOM('.flt-time').style.backgroundColor = 'slategray'
         DOM('.content').innerHTML += `
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScvseR1TYkgwx9bHjzkVWZ8qGjLHz0TlQ0k7qyQYIQhZQbmiA/viewform?embedded=true" 
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSr751z0JzvPF91DtykMiN8N7uwHjZ-MOM25I7HJfneLo1tOr-AJdjNXFPu9JOXfOa9D_ZylSmAIlNv/pubhtml?gid=233567636&single=true" 
         frameborder="0" 
         scrolling="no" 
         class="iframe"

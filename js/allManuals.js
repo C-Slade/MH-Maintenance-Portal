@@ -176,6 +176,7 @@ const allManuals = [
         ]
     },
     {
+        page: 'manuals',
         manual_types: [
             {
                 type: 'maintenance',
@@ -415,5 +416,268 @@ const allManuals = [
                 filePath: '../Docs/manuals/Oas-cards/Example-pdf.pdf',
             },
         ]
+    },
+    {
+        page: 'training',
+        part_145_training: [
+            {
+                training: 'Part 145 review',
+                open: 'https://docs.google.com/presentation/d/1pRTO8kcL6DZx9aIGHNdVhAEWZXkJDwBCcwKxpxYSAy8/embed?start=false&amp;loop=false&amp;delayms=3000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSf4EI11akACL0UdQrz88JOdHfxnjqungrdZm5tWguQQp7kpTw/viewform?embedded=true'
+            },
+            {
+                training: 'Repair station manual',
+                open: 'https://docs.google.com/presentation/d/1pRTO8kcL6DZx9aIGHNdVhAEWZXkJDwBCcwKxpxYSAy8/embed?start=false&loop=false&delayms=3000',
+                exam: 'https://drive.google.com/open?id=138HZgkT5pmK1-36kIzEd8DZYnexNf3By3qSNLqp69YE'
+            },
+            {
+                training: 'Quality Control Manual',
+                open: 'https://docs.google.com/presentation/d/1OWNfv8CZcqYVzwRBYFFAfz7gPREQ3nR8h-mtNDk-sBY/embed?start=false&loop=false&delayms=10000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSf4EI11akACL0UdQrz88JOdHfxnjqungrdZm5tWguQQp7kpTw/viewform?embedded=true'
+            },
+            {
+                training: 'Incoming Recieving Inspector Training*',
+                open: 'https://docs.google.com/presentation/d/1M_pH4COTw0QFDhdn_8wJwe2B9qXAY4yJUs75qvhe3XY/embed?start=false&loop=false&delayms=3000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSf4EI11akACL0UdQrz88JOdHfxnjqungrdZm5tWguQQp7kpTw/viewform?embedded=true'
+            },
+            {
+                training: 'Suspected Unapproved Parts',
+                open: 'https://docs.google.com/presentation/d/1e4RizmXzE6W4KDDdD54LG9xtzomLR7LIKRZ8araulRQ/embed?start=false&loop=false&delayms=5000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSf4EI11akACL0UdQrz88JOdHfxnjqungrdZm5tWguQQp7kpTw/viewform?embedded=true'
+            },
+            {
+                training: 'Course Evaluation Form TR-0011',
+                open: 'https://drive.google.com/open?id=1FJrPDw39Fm0cTSp8uhREGINgBHSZCVpVrsTt2pfuHgI',
+            },
+            {
+                training: 'Exam Results',
+                open: 'http://docs.google.com/spreadsheets/d/e/2PACX-1vT5Smh3SX141ycFRDIQTsJyx6ewgdjHwKt5uwIgjAPpEa7-eST8X-OwahVJkK4FyIDdnATz34WAGtnZ/pubhtml?gid=0&single=true',
+            },
+        ],
+        part_135_training: [
+            {
+                training: 'INITIAL TRAINING',
+                open: 'https://docs.google.com/presentation/d/e/2PACX-1vQwnP6giEAXc6-MkuyYqH3BvF9ahKPhb9ijTIU1lrOZ5jPTSoNUycRz2ti8s4XKDYnj01BhuvgIhep3/embed?start=false&loop=false&delayms=3000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSenUn3r2rmdPkkjG5RpIHCTXSY3YZbwmDLrTUkXOq3rTd1CaA/viewform?embedded=true'
+            },
+            {
+                training: 'PART 135 REVIEW',
+                open: 'https://docs.google.com/presentation/d/1wQEfRrsPElivFlPoYgIMCeW2ux1EbGmQy384GLAm9dw/embed?start=false&loop=false&delayms=3000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSfN_FrbSkl1kiezEaz2AE7M0qoVGx8gZHSnt1QVSwttPhgg5A/viewform?embedded=true'
+            },
+            {
+                training: 'GMM',
+                open: 'https://docs.google.com/presentation/d/1wQEfRrsPElivFlPoYgIMCeW2ux1EbGmQy384GLAm9dw/embed?start=false&loop=false&delayms=3000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSfVUOcXmcr5Kmvl0tWztdpBVEchRTTlu8K158O88jl4zyTa_w/viewform?embedded=true'
+            },
+            {
+                training: 'CAMP PROGRAM - 412*',
+                open: 'https://docs.google.com/presentation/d/1M_pH4COTw0QFDhdn_8wJwe2B9qXAY4yJUs75qvhe3XY/embed?start=false&loop=false&delayms=3000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSdF-or-PJW9ucm989NumNFIBAxR7ZjElY-AyWtwDPLYfHdUVw/viewform?embedded=true'
+            },
+            {
+                training: 'RII TRAINING**',
+                open: 'https://docs.google.com/presentation/d/1ss2a0kDcc3-CZcUxzWxjE5Ed_16dlecV--en7xgG05I/embed?start=false&loop=false&delayms=15000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSf4EI11akACL0UdQrz88JOdHfxnjqungrdZm5tWguQQp7kpTw/viewform?embedded=true'
+            },
+            {
+                training: 'HUMAN FACTORS',
+                open: 'https://docs.google.com/presentation/d/1tyvf_5W6GGqNnFgs_LK3ub13oiksz-JwldZOmV7MaC4/embed?start=false&loop=false&delayms=3000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSf4EI11akACL0UdQrz88JOdHfxnjqungrdZm5tWguQQp7kpTw/viewform?embedded=true'
+            },
+            {
+                training: 'HAZMAT INTRO',
+                open: 'https://docs.google.com/presentation/d/1ejCjEzKyZXq5scuM2a2rYdFneh4sdtUVvVFKpQZ7F90/embed?start=false&loop=false&delayms=3000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSf4EI11akACL0UdQrz88JOdHfxnjqungrdZm5tWguQQp7kpTw/viewform?embedded=true'
+            },
+            {
+                training: 'HAZMAT AIR CARRIER',
+                open: 'https://docs.google.com/presentation/d/1VoPXxzDJfR2YVQQfE9trROPEpDMMhqeDNg8vPR_L0_0/embed?start=false&loop=false&delayms=3000',
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSf4EI11akACL0UdQrz88JOdHfxnjqungrdZm5tWguQQp7kpTw/viewform?embedded=true'
+            },
+            {
+                training: 'EXAM RESULTS',
+                open: 'http://docs.google.com/spreadsheets/d/e/2PACX-1vRcngm7sATqrY1016gbOnCAX6IJjunloBfVvILulaR7OMidUq7Yh3kYYJzucBnIiOG_7dhgn7vWYpB_/pubhtml?gid=0&single=true',
+            },
+        ],
+        fuel_training: [
+            {
+                training: 'FUEL HANDLING',
+                open: 'https://docs.google.com/presentation/d/1aQhAg_RqY_9Fu8Nj103qmvaV_usX8-hsLDKBN32iJCI/embed?start=false&loop=false&delayms=30000',
+            },
+            {
+                training: 'FUEL RECIEVING',
+                open: 'https://docs.google.com/presentation/d/1-U6ylCfatkp65PufvzqYJ9gmb3u56qAk53XPCoun_KU/embed?start=false&loop=false&delayms=15000',
+            },
+            {
+                training: 'STORMWATER TRAINING',
+                open: 'https://docs.google.com/presentation/d/1--6OjAS_qDaFkCsACcguye0Lj_4cOq_Zl6EhNWFNUuE/embed?start=false&loop=false&delayms=15000',
+            },
+            {
+                training: 'SPILL PREVENTION',
+                open: 'https://docs.google.com/presentation/d/1ytrB4FE0FED7bI13nmP-iIdLvAXra0s-q8Itu294Cnk/embed?start=false&loop=false&delayms=15000',
+            },
+            {
+                training: 'FUEL HANDLING & RECEIVING',
+                exam: 'https://docs.google.com/forms/d/1A8PDxQkloTXUqHb1XGuv2oFRMJsRdlKMcGqcSL8IL2A/viewform?embedded=true'
+            },
+            {
+                training: 'STORMWATER AND SPILL PREVENTION',
+                exam: 'https://docs.google.com/forms/d/1h7rbq_vUYJL-bq4GwtvcmPvILjQD1AJpKe358OzPAHQ/viewform?embedded=true'
+            },
+            {
+                training: 'EXAM RESULTS',
+                open: 'src="http://docs.google.com/spreadsheets/d/e/2PACX-1vSxiSUiSlRAGQH229avm19abSlyUuOZ0n1nWlt7HB7zw8YF29hF_YFZ402GKxgUSYbojZ1QW_Q69lPd/pubhtml?gid=13845552&single=true"',
+            },
+        ],
+        human_factors_training: {
+            training: [
+                {
+                    part: 'part 1',
+                    open: 'https://docs.google.com/presentation/d/1tyvf_5W6GGqNnFgs_LK3ub13oiksz-JwldZOmV7MaC4/embed?start=false&loop=false&delayms=3000'
+                },
+                {
+                    part: 'part 2',
+                    open: 'https://docs.google.com/presentation/d/1hHRG-UKsK7JM1DnDmAg1b_LUeiNwPcS51KxSHgYPDF4/embed?start=false&loop=false&delayms=3000'
+                },
+                {
+                    part: 'part 3',
+                    open: 'https://docs.google.com/presentation/d/1ERSiZ2VvAQXZ_GUscV5WnwiXJl0wcBXtO4btNO39kyo/embed?start=false&loop=false&delayms=3000'
+                },
+            ],
+            exam: {
+                exam: 'https://docs.google.com/forms/d/e/1FAIpQLSe2p9qOF-B1wodiyxxIwOU5r4dGvmIuc1KmVMRfaPzQTlRikA/viewform?embedded=true',
+                exam_results: 'http://docs.google.com/spreadsheets/d/e/2PACX-1vTqDgo5HIMfu_x2Z-E8Dj-JfU4CCcSphsAjWNWp2vP3-j13Hz6c-Yolthb_RWpdMAMKiZGDLoRtafvh/pubhtml?gid=1552550341&single=true'
+            },
+        },
+        fuel_quality_manual: {
+            training: 'Fuel Quality',
+            link: '../Docs/training/human_factors/Example-pdf.pdf'
+        }
+    },
+    {
+        page: 'Quality and Safety',
+        main: [
+            {
+                name: 'Safety Notes',
+                filePath: '../Docs/Safety/main/Example-pdf.pdf',
+            },
+            {
+                name: 'Risk Management',
+                filePath: '../Docs/Safety/main/Example-pdf.pdf',
+            },
+            {
+                name: 'Hse Manual',
+                filePath: '../Docs/Safety/main/Example-pdf.pdf',
+            },
+            {
+                name: 'Event investigation',
+                filePath: '../Docs/Safety/main/Example-pdf.pdf',
+            },
+            {
+                name: 'Emergency response plan',
+                filePath: '../Docs/Safety/main/Example-pdf.pdf',
+            },
+            {
+                name: 'Interntal evaluation',
+                filePath: '../Docs/Safety/main/Example-pdf.pdf',
+            },
+            {
+                name: 'safety data sheet',
+                filePath: '../Docs/Safety/main/Example-pdf.pdf',
+                google_drive: true,
+            },
+            {
+                name: 'sms manual',
+                filePath: '../Docs/Safety/main/Example-pdf.pdf',
+            },
+        ],
+        forms: [
+            {
+                name: 'gor',
+                filePath: '../Docs/Safety/forms/Example-pdf.pdf',
+            },
+            {
+                name: 'station checklist',
+                filePath: '../Docs/Safety/forms/Example-pdf.pdf',
+            },
+            {
+                name: 'first report of injury',
+                filePath: '../Docs/Safety/forms/Example-pdf.pdf',
+            },
+            {
+                name: 'flight irregularity',
+                filePath: '../Docs/Safety/forms/Example-pdf.pdf',
+            },
+        ],
+        archive: [
+            {
+                name: '2015',
+                filePath: '../Docs/Safety/archive/Example-pdf.pdf',
+            },
+            {
+                name: '2016',
+                filePath: '../Docs/Safety/archive/Example-pdf.pdf',
+            },
+            {
+                name: '2017',
+                filePath: '../Docs/Safety/archive/Example-pdf.pdf',
+            },
+            {
+                name: '2018',
+                filePath: '../Docs/Safety/archive/Example-pdf.pdf',
+            },
+        ],
+    },
+    {
+        page: 'memos',
+        maintenance_memos: [
+            {
+                name: '2014',
+                filePath: '../Docs/Memos/Maintenance-memos/Example-pdf.pdf',
+            },
+            {
+                name: '2015',
+                filePath: '../Docs/Memos/Maintenance-memos/Example-pdf.pdf',
+            },
+            {
+                name: '2016',
+                filePath: '../Docs/Memos/Maintenance-memos/Example-pdf.pdf',
+            },
+            {
+                name: '2017',
+                filePath: '../Docs/Memos/Maintenance-memos/Example-pdf.pdf',
+            },
+            {
+                name: '2018',
+                filePath: '../Docs/Memos/Maintenance-memos/Example-pdf.pdf',
+            },
+            {
+                name: 'cass',
+                filePath: '../Docs/Memos/Maintenance-memos/Example-pdf.pdf',
+            },
+        ],
+        operations_memos: [
+            {
+                name: '2014',
+                filePath: '../Docs/Memos/Operation-memos/Example-pdf.pdf',
+            },
+            {
+                name: '2015',
+                filePath: '../Docs/Memos/Operation-memos/Example-pdf.pdf',
+            },
+            {
+                name: '2016',
+                filePath: '../Docs/Memos/Operation-memos/Example-pdf.pdf',
+            },
+            {
+                name: '2017',
+                filePath: '../Docs/Memos/Operation-memos/Example-pdf.pdf',
+            },
+            {
+                name: '2018',
+                filePath: '../Docs/Memos/Operation-memos/Example-pdf.pdf',
+            },
+        ],
     }
 ]

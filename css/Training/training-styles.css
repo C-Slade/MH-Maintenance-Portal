@@ -1,1 +1,191 @@
-/* No CSS *//*# sourceMappingURL=training-styles.css.map */
+.content .google-wrapper {
+  position: fixed;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  top: 25%;
+  width: 37rem;
+  opacity: 0;
+}
+
+.content .google-wrapper .google-controls {
+  width: 100%;
+  background-color: black;
+  height: 2rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.content .google-wrapper .google-controls i {
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.content .google-wrapper .google-controls i:hover {
+  color: #6596ff;
+}
+
+.content .google-wrapper .google-slides {
+  width: 100%;
+  height: 30rem;
+}
+
+@media screen and (max-width: 800px) {
+  .content .google-wrapper {
+    width: 80%;
+  }
+}
+
+.content .nav .top-3-nav .part-145,
+.content .nav .top-3-nav .part-135,
+.content .nav .top-3-nav .fuel-training,
+.content .nav .top-3-nav .human-factors {
+  font-size: 1rem !important;
+  padding: .70rem 0 0 0 !important;
+}
+
+@media screen and (max-width: 1235px) {
+  .content .nav .top-3-nav .part-145,
+  .content .nav .top-3-nav .part-135,
+  .content .nav .top-3-nav .fuel-training,
+  .content .nav .top-3-nav .human-factors {
+    font-size: 0.80rem !important;
+    padding: 0.95rem 0 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content .nav .top-3-nav .part-145,
+  .content .nav .top-3-nav .part-135,
+  .content .nav .top-3-nav .fuel-training,
+  .content .nav .top-3-nav .human-factors {
+    font-size: 0.65rem !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content .nav .top-3-nav .human-factors {
+    padding: .95rem 0 0 0 !important;
+  }
+}
+
+.content .open_exam-wrapper {
+  margin: 5rem 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 85%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
+  text-transform: capitalize;
+}
+
+.content .break {
+  border-bottom: 1px solid white;
+  width: 40%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 1rem 0;
+  min-width: 17rem;
+}
+
+.content h4 {
+  color: white;
+  font-weight: 600;
+}
+
+.content .note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  width: 40%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 0.5rem 0;
+  min-width: 16rem;
+}
+
+.content .note #fuel_quality {
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.content .note #fuel_quality:hover {
+  color: #6596ff;
+  cursor: pointer;
+}
+
+.content .training-span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 50%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 0.5rem 0;
+  min-width: 16rem;
+}
+
+.content .training-span .type {
+  padding: .35rem;
+  border-bottom: 1px solid white;
+  font-size: 1.25rem;
+  margin: 0 0.25rem;
+  width: 40%;
+  min-width: 10rem;
+  height: 2.5rem;
+  height: 100%;
+  background-color: #6596ff;
+  border-radius: .45rem;
+  text-align: center;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  font-weight: 300;
+  color: white;
+}
+
+.content .training-span p {
+  text-decoration: underline;
+  cursor: pointer;
+  color: white;
+  font-size: 1.75rem;
+  margin: auto 0.50rem;
+}
+
+.content .training-span p:hover {
+  color: #6596ff;
+}
+
+.content .open-only .hide {
+  visibility: hidden;
+}
+/*# sourceMappingURL=training-styles.css.map */

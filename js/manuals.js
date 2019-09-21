@@ -85,7 +85,6 @@ class Manuals {
                     DOM(`.pdf-viewer`).style.display = 'block';
                     DOM('.pdf-viewer').innerHTML += '<canvas id="pdf-render"></canvas>'
                     makePDFViewer(manual_filepaths[i]);
-                    TweenMax.to('.pdf-viewer', 0.5, { opacity: 1, ease: Power4, })
                 }
             }
             for (let i = 0; i < oas_links.length; i++) {
@@ -95,7 +94,6 @@ class Manuals {
                     DOM(`.pdf-viewer`).style.display = 'block';
                     DOM('.pdf-viewer').innerHTML += '<canvas id="pdf-render"></canvas>'
                     makePDFViewer(oas_filepaths[i]);
-                    TweenMax.to('.pdf-viewer', 0.5, { opacity: 1, ease: Power4, })
                 }
             }
         })
@@ -141,7 +139,6 @@ class Manuals {
                     DOM(`.pdf-viewer`).style.display = 'block';
                     DOM('.pdf-viewer').innerHTML += '<canvas id="pdf-render"></canvas>'
                     makePDFViewer(link);
-                    TweenMax.to('.pdf-viewer', 0.5, { opacity: 1, ease: Power4, })
                 })
             }
         });
